@@ -44,9 +44,6 @@ public class Controller {
     private Label maxEspera;
 
     @FXML
-    private Button btnReset;
-
-    @FXML
     private Button btnRun;
 
 
@@ -136,7 +133,6 @@ public class Controller {
 
     private void disableRunButtons() {
         btnRun.setDisable(Boolean.FALSE);
-
     }
 
     private void resetStatistics() {
@@ -144,13 +140,9 @@ public class Controller {
     maxEspera.setText("");
     }
 
-
-
-
-
     private void enableRunButtons() {
         btnRun.setDisable(Boolean.FALSE);
-      //  btnStep.setDisable(Boolean.FALSE);
+
     }
 
     private void loadTable(){
