@@ -1,28 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/libraries.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/libraries.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_apache_logging_log4j_log4j_api_2_11_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_apache_logging_log4j_log4j_core_2_11_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Simulacion terminada, UI empezada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tp-7-2018-Andres-Acosta.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tp-7-2018-Andres-Acosta.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/Euler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/BaseRandomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/BaseRandomGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/ConstantDistributionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/ConstantGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/NegativeExponentialDistributionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/NegativeExponentialDistributionGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/model/EventGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/model/TimeEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/model/TimeEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/model/clientes/ClientGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/model/clientes/ClientGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/model/servers/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/model/servers/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/model/servers/ServerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/model/servers/ServerState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/model/servers/ServerWithInterruptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/model/servers/ServerWithInterruptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/simulation/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/simulation/Events.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utn/frc/sim/simulation/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utn/frc/sim/simulation/Simulation.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -122,26 +102,28 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="35" />
-          <entry key="java" value="5725" />
+          <entry key="java" value="5732" />
+          <entry key="txt" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5725" />
+          <entry key="JAVA" value="5732" />
+          <entry key="PLAIN_TEXT" value="33" />
           <entry key="XML" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="7" />
-          <entry key="java" value="88" />
+          <entry key="fxml" value="8" />
+          <entry key="java" value="90" />
           <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="88" />
-          <entry key="XML" value="14" />
+          <entry key="JAVA" value="90" />
+          <entry key="XML" value="15" />
         </counts>
       </usages-collector>
     </session>
@@ -151,11 +133,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="143" column="24" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
+            <state relative-caret-position="157">
+              <caret line="167" column="8" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1271#1272#0" expanded="true" />
@@ -182,7 +164,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/model/TimeEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/simulation/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -223,8 +217,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/model/servers/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+            <state relative-caret-position="18">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1365#1366#0" expanded="true" />
@@ -244,18 +238,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/sim1.fxml">
+        <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/sample.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/ConstantGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+              <folding>
+                <element signature="e#383#384#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -316,16 +316,13 @@
         <option value="$PROJECT_DIR$/src/utn/frc/sim/UnparsableExpressionException.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/Funcion.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/Euler.java" />
-        <option value="$PROJECT_DIR$/src/utn/frc/sim/sample.fxml" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/model/TimeEventEuler.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/ConstantDistributionGenerator.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/BaseRandomGenerator.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/NegativeExponentialDistributionGenerator.java" />
-        <option value="$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/ConstantGenerator.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/util/NumberTextField.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/sim1.fxml" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/model/clientes/EventGenerator.java" />
-        <option value="$PROJECT_DIR$/src/utn/frc/sim/model/TimeEvent.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/model/servers/Server.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/model/clientes/Client.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/model/clientes/ClientGenerator.java" />
@@ -339,6 +336,9 @@
         <option value="$PROJECT_DIR$/src/utn/frc/sim/Controller.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/util/DoubleUtils.java" />
         <option value="$PROJECT_DIR$/src/utn/frc/sim/simulation/Simulation.java" />
+        <option value="$PROJECT_DIR$/src/utn/frc/sim/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/ConstantGenerator.java" />
+        <option value="$PROJECT_DIR$/src/utn/frc/sim/model/TimeEvent.java" />
       </list>
     </option>
   </component>
@@ -371,17 +371,6 @@
             <path>
               <item name="Tp-7-2018-Andres-Acosta" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tp-7-2018-Andres-Acosta" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tp-7-2018-Andres-Acosta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tp-7-2018-Andres-Acosta" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="libraries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tp-7-2018-Andres-Acosta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tp-7-2018-Andres-Acosta" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -389,13 +378,6 @@
               <item name="Tp-7-2018-Andres-Acosta" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tp-7-2018-Andres-Acosta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tp-7-2018-Andres-Acosta" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sim" type="462c0819:PsiDirectoryNode" />
-              <item name="Euler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tp-7-2018-Andres-Acosta" type="b2602c69:ProjectViewProjectNode" />
@@ -403,36 +385,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sim" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tp-7-2018-Andres-Acosta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tp-7-2018-Andres-Acosta" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sim" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="clientes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tp-7-2018-Andres-Acosta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tp-7-2018-Andres-Acosta" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sim" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="servers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tp-7-2018-Andres-Acosta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tp-7-2018-Andres-Acosta" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sim" type="462c0819:PsiDirectoryNode" />
-              <item name="simulation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tp-7-2018-Andres-Acosta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tp-7-2018-Andres-Acosta" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sim" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -454,7 +406,7 @@
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542607390643" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542607528099" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../MetodosNumericosParaIng" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -600,6 +552,14 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
     </task>
+    <task id="LOCAL-00001" summary="Simulacion terminada, UI empezada">
+      <created>1542607544291</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542607544291</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -618,7 +578,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.34918034" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -649,6 +609,8 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="Simulacion terminada, UI empezada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Simulacion terminada, UI empezada" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -739,14 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/util/HoursTextField.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -804,28 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/ConstantGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/model/TimeEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1023,18 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/model/servers/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1395#1396#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/model/servers/ServerWithInterruptions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
@@ -1079,22 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="143" column="24" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
-            <element signature="e#1588#1589#0" expanded="true" />
-            <element signature="e#1635#1636#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/simulation/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1115,6 +1019,63 @@
             <element signature="e#7321#7322#0" expanded="true" />
             <element signature="e#7204#7382#0" />
             <element signature="e#7388#7629#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/generators/distributions/ConstantGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/model/TimeEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/model/servers/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1365#1366#0" expanded="true" />
+            <element signature="e#1395#1396#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utn/frc/sim/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="167" column="8" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1271#1272#0" expanded="true" />
+            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1588#1589#0" expanded="true" />
+            <element signature="e#1635#1636#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
           </folding>
         </state>
       </provider>
