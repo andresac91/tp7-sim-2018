@@ -18,7 +18,7 @@ public class Server implements EventGenerator {
 
     public Server(String serverName, TimeEvent timeEvent) {
         this.serverName = serverName;
-        this.timeEvent = timeEvent;
+        this.timeEvent =  timeEvent;
         this.state = ServerState.LBR;
     }
 
@@ -46,7 +46,11 @@ public class Server implements EventGenerator {
         return serverName;
     }
 
-    public LocalDateTime getNextEnd() {
+    public Optional<LocalDateTime> getNextEnd() {
+        return  Optional.ofNullable(nextEnd);
+    }
+
+    public LocalDateTime geNextEnd(){
         return nextEnd;
     }
 

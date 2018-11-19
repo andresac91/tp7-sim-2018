@@ -45,6 +45,8 @@ public class NegativeExponentialDistributionGenerator extends BaseRandomGenerato
         return new NegativeExponentialValueGenerator();
     }
 
+
+
     /**
      * Clase que representa la distribucion del generador.
      */

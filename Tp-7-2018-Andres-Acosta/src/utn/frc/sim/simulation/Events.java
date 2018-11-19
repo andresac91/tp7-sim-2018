@@ -6,7 +6,7 @@ public enum Events {
     LLEGADA_PERSONA("Llegada de persona."),
     FIN_TIRADA("Fin de tirada."),
     FIN_LIMPIEZA("Fin de limpieza de alfombra."),
-    FIN_MANTENIMIENTO("Fin de mantenimiento de alfombra.");
+    FIN_INTERRUPTION("Fin de interrupcion.");
 
     private final String text;
 

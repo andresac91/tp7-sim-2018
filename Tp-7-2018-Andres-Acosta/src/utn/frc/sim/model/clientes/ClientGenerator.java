@@ -17,12 +17,12 @@ public class ClientGenerator implements EventGenerator {
         this.nextClientEvent = initTime;
     }
 
-    public Client getNextClient(Boolean calculateNextEvent) {
-        if(calculateNextEvent){
+    public Client getNextClient() {
+
             calculateNextEvent();
-        } else {
-            nextClientEvent = null;
-        }
+
+          //  nextClientEvent = null;
+
         lastClient++;
         return new Client(lastClient);
     }
@@ -38,7 +38,9 @@ public class ClientGenerator implements EventGenerator {
     private void calculateNextEventFrom(LocalDateTime timeFrom){
         nextClientEvent = timeEvent.calculateNextEventFromRandom(timeFrom);
     }
-
+    public LocalDateTime getNextClientEvent() {
+        return nextClientEvent;
+    }
     @Override
     public Optional<LocalDateTime> getNextEvent() {
         return Optional.ofNullable(nextClientEvent);
