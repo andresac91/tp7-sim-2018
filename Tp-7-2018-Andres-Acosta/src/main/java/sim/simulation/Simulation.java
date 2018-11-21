@@ -1,6 +1,7 @@
 package main.java.sim.simulation;
 
 
+import main.java.sim.Euler.Euler;
 import main.java.sim.generators.distributions.ConstantGenerator;
 import main.java.sim.generators.distributions.DistributionRandomGenerator;
 import main.java.sim.generators.distributions.UniformDistributionGenerator;
@@ -35,7 +36,7 @@ public class Simulation {
     private double maxDurationInQueue;
     private Client clientOfMaxDuration;
     private List<EventGenerator> eventGenerators;
-    private int interruption = 10;
+    private Double timeEuler;
 
     private void initListOfEventGenerators() {
         eventGenerators = new ArrayList<>();
@@ -50,7 +51,7 @@ public class Simulation {
     }
 
     private void initSimulation( ) {
-
+        initEuler();
         initClient();
         initListOfEventGenerators();
         initFirstEventOfDay();
@@ -59,6 +60,14 @@ public class Simulation {
         initMagicCarpet();
         initEvent();
 
+
+    }
+
+    private void initEuler() {
+        Euler euler = new Euler();
+        euler.resultado();
+        timeEuler = euler.getTiempo();
+        //System.out.println(timeEuler);
     }
 
     private void initClient() {
@@ -96,7 +105,7 @@ public class Simulation {
 
     private void initMagicCarpet(){
         magicCarpetQueue = new LinkedList<>();
-        DistributionRandomGenerator generator = ConstantGenerator.createOf(0.724);
+        DistributionRandomGenerator generator = ConstantGenerator.createOf(timeEuler);
         TimeEvent timeEvent = TimeEvent.create(generator, ChronoUnit.MINUTES, ChronoUnit.SECONDS);
         DistributionRandomGenerator generatorTimeOfInterruptions = ConstantGenerator.createOf(15.0);
         TimeEvent timeOfInterruption = TimeEvent.create(generatorTimeOfInterruptions, ChronoUnit.MINUTES, ChronoUnit.SECONDS);

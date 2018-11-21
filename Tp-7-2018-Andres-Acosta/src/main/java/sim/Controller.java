@@ -1,5 +1,6 @@
 package main.java.sim;
 
+import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,28 +12,26 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import main.java.sim.Euler.Euler;
+import main.java.sim.controllers.ClientController;
+import main.java.sim.controllers.EulerController;
 import main.java.sim.controllers.StatisticsController;
-import main.java.sim.model.clientes.Client;
 import main.java.sim.rows.Fila;
-import main.java.sim.rows.FilaEuler;
 import main.java.sim.simulation.SimulationFinishedException;
 import main.java.sim.simulation.SimulationWrapper;
 
 import java.io.IOException;
 import java.util.Optional;
 
-public class Controller {
+public class Controller<pivate> {
 
     private SimulationWrapper simulation;
     private ObservableList<Fila> data = FXCollections.observableArrayList();
-    private ObservableList<FilaEuler> data2 = FXCollections.observableArrayList();
     private Euler euler = new Euler();
 
     private Optional<ClientController> controllerClient;
     private Optional<StatisticsController> controllerStatistic;
     private Optional<EulerController> controllerEuler;
     private Stage dialog;
-
 
     @FXML
     public TableColumn event;
@@ -56,35 +55,32 @@ public class Controller {
     @FXML
     private Hyperlink hypClient;
     @FXML
-    private  Hyperlink hypStatistics;
+    private Hyperlink hypStatistics;
     @FXML
-    private  Hyperlink hypEuler;
-
-    @FXML
-    public TableColumn<Client, String> stateClient;
-    @FXML
-    public TableColumn<Client, String> clientDate;
-    @FXML
-    public TableColumn<Client, String> inTime;
-    @FXML
-    public TableColumn<Client, String> inServerTime;
-    @FXML
-    public TableColumn<Client, String> outTime;
-
-    @FXML
-    private Label maxCola;
-
-    @FXML
-    private Label maxEspera;
+    private Hyperlink hypEuler;
 
     @FXML
     private Button btnRun;
 
     @FXML
-    private TextField timeOfInterruption;
+    private TextField fromHour;
+    @FXML
+    private TextField toHour;
+    private int from , to;
 
-    private int interuption;
+    @FXML
+    public void initialize(){
+        initializeController();
+        startNewSimulation();
+        verificarTextField(toHour);
+        verificarTextField(fromHour);
+        initValues();
+    }
 
+    private void initValues() {
+        from = 9;
+        to = 24;
+    }
 
     @FXML
     void resetClick(ActionEvent event) {
@@ -96,41 +92,32 @@ public class Controller {
     private void clearItemsInTableView() {
         tvSim.getItems().clear();
     }
+
     private void resetSimulation() {
         enableSemiautomaticButton();
         clearItemsInTableView();
         initializeNewSimulation();
     }
+
     private void enableSemiautomaticButton() {
         btnRun.setDisable(false);
     }
-
 
     @FXML
     void runClick(ActionEvent event) {
         resetSimulation();
         runSimulationToEnd();
-
     }
 
-
-
-
-    @FXML
-    public void initialize(){
-        initializeController();
-        startNewSimulation();
-
-    }
 
 
     private void startNewSimulation() {
         simulation = SimulationWrapper.ofType();
     }
+
     private void runSimulationToEnd() {
         runSimulation(Boolean.TRUE);
     }
-
 
     private void runSimulation(boolean auto) {
         while (true) {
@@ -138,40 +125,32 @@ public class Controller {
                 runOneStepOfSimulationAndAddToTable();
             } catch (SimulationFinishedException e) {
                 finishSimulation();
-
                 break;
             }
         }
 
     }
 
-
     private void runOneStepOfSimulationAndAddToTable() throws SimulationFinishedException {
         simulation.step();
-        loadTable();
+        searchClient();
     }
 
     private void initializeNewSimulation() {
-
         simulation = SimulationWrapper.ofType();
         data = FXCollections.observableArrayList();
     }
 
     private void finishSimulation() {
         disableRunButtons();
-
     }
-
 
     private void disableRunButtons() {
         btnRun.setDisable(Boolean.FALSE);
     }
 
-
-
     private void enableRunButtons() {
         btnRun.setDisable(Boolean.FALSE);
-
     }
 
     private void loadTable(){
@@ -184,22 +163,19 @@ public class Controller {
        String endMagicCarpetContent = simulation.getMagicCarpetNextEvent();
        String queueMagicCarpetContent = simulation.getMagicCarpetQueueSize();
 
+
+
        data.addAll(new Fila (eventContent, clockContent, clientContent, nextClientContent, stateMagicCarpetContent,clientMagicCarpetContent,endMagicCarpetContent, queueMagicCarpetContent));
 
-        event.setCellValueFactory(new PropertyValueFactory<>("event"));
-        clock.setCellValueFactory(new PropertyValueFactory<>("clock"));
-        client.setCellValueFactory(new PropertyValueFactory<>("client"));
-        nextClient.setCellValueFactory(new PropertyValueFactory<>("nextClient"));
-        stateMagicCarpet.setCellValueFactory(new PropertyValueFactory<>("stateMagicCarpet"));
-        clientMagicCarpet.setCellValueFactory(new PropertyValueFactory<>("clientMagicCarpet"));
-        endMagicCarpet.setCellValueFactory(new PropertyValueFactory<>("endMagicCarpet"));
-        queueMagicCarpet.setCellValueFactory(new PropertyValueFactory<>("queueMagicCarpet"));
-
-
-
-
-        tvSim.setItems(data);
-
+       event.setCellValueFactory(new PropertyValueFactory<>("event"));
+       clock.setCellValueFactory(new PropertyValueFactory<>("clock"));
+       client.setCellValueFactory(new PropertyValueFactory<>("client"));
+       nextClient.setCellValueFactory(new PropertyValueFactory<>("nextClient"));
+       stateMagicCarpet.setCellValueFactory(new PropertyValueFactory<>("stateMagicCarpet"));
+       clientMagicCarpet.setCellValueFactory(new PropertyValueFactory<>("clientMagicCarpet"));
+       endMagicCarpet.setCellValueFactory(new PropertyValueFactory<>("endMagicCarpet"));
+       queueMagicCarpet.setCellValueFactory(new PropertyValueFactory<>("queueMagicCarpet"));
+       tvSim.setItems(data);
     }
 
     private Optional<ClientController> showTableClient(){
@@ -236,27 +212,24 @@ public class Controller {
         }
     }
 
-
-
     private void openScene(Parent parent, String title){
         dialog = new Stage();
         Scene scene = new Scene(parent);
         dialog.setScene(scene);
         dialog.setTitle(title);
         dialog.show();
-
     }
+
     @FXML
     private void openClient(ActionEvent event){
         showClient();
         hypClient.setVisited(Boolean.FALSE);
     }
 
-
     private void showClient() {
         if (!controllerClient.isPresent()) {
             controllerClient = showTableClient();
-            controllerClient.ifPresent(c -> c.addClientsToTable(simulation.getClient()));
+            controllerClient.ifPresent(c ->c.loadClient(simulation.getClient()));
         }
         initializeController();
     }
@@ -268,11 +241,13 @@ public class Controller {
         }
         initializeController();
     }
+
     private void initializeController() {
         controllerClient = Optional.empty();
         controllerStatistic = Optional.empty();
         controllerEuler = Optional.empty();
     }
+
     @FXML
     private void openStatistic(ActionEvent e){
         showStatistics();
@@ -293,11 +268,29 @@ public class Controller {
         initializeController();
     }
 
-    private void listaEuler(){
-        Euler euler = new Euler();
-        euler.resultado();
-       // data2.addAll(euler.getListEuler());
+    private void verificarTextField(TextField textField){
+        textField.textProperty().addListener(agregarListenerAlTextField(textField));
     }
 
+    private ChangeListener<String> agregarListenerAlTextField(TextField aTextField) {
+        return (observable, oldValue, newValue) -> {
+            if (!newValue.matches("\\d*")) {
+                aTextField.setText(newValue.replaceAll("[^\\d]", ""));
+            }
+        };
+    }
+
+
+    private void searchClient(){
+        if(!fromHour.getText().isEmpty()){
+            from = Integer.parseInt(fromHour.getText());
+        }
+        if(!toHour.getText().isEmpty()){
+            to = Integer.parseInt(toHour.getText());
+        }
+        if (simulation.getClockTime().getHour()>= from && simulation.getClockTime().getHour()< to) {
+            loadTable();
+        }
+    }
 
 }

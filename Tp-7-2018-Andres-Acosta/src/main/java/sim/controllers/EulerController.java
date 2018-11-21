@@ -1,4 +1,4 @@
-package main.java.sim;
+package main.java.sim.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,20 +36,17 @@ public class EulerController {
     @FXML
     public void initialize(){
         initColumns();
-
     }
 
     private void initColumns() {
-
         step.setCellValueFactory(new PropertyValueFactory<>("step"));
         time.setCellValueFactory(new PropertyValueFactory<>("tiempo"));
         meters.setCellValueFactory(new PropertyValueFactory<>("metros"));
         fuction.setCellValueFactory(new PropertyValueFactory<>("dMdT"));
         timePlusOne.setCellValueFactory(new PropertyValueFactory<>("tiempoM1"));
         meterPlusOne.setCellValueFactory(new PropertyValueFactory<>("metrosM1"));
-
-
     }
+
     public void loadTable(List<FilaEuler> listEuler){
         Euler euler = new Euler();
         euler.resultado();

@@ -7,7 +7,7 @@ import java.time.temporal.ChronoUnit;
 
 public class TimeEvent {
     private static final int SECONDS_IN_MINUTE = 60;
-    private static final int MILLIS_IN_SECOND = 1000;
+    private static final int MILLIS_IN_SECOND = 60;
     private final DistributionRandomGenerator generator;
     private final ChronoUnit bigUnit;
     private final ChronoUnit smallUnit;

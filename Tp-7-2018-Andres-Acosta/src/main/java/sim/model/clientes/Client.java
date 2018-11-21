@@ -6,7 +6,7 @@ import java.time.temporal.ChronoUnit;
 public class Client {
 
     private int clientNumber;
-    private LocalDateTime inTime;
+    private LocalDateTime inTime ;
     private LocalDateTime outTime;
     private LocalDateTime serveTime;
     private StateClient state;
@@ -59,7 +59,7 @@ public class Client {
         if (inTime == null || serveTime == null) {
             throw new IllegalStateException();
         }
-        return ChronoUnit.SECONDS.between(inTime, serveTime);
+        return (ChronoUnit.SECONDS.between(inTime,serveTime));
     }
 
     @Override

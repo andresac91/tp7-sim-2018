@@ -45,7 +45,6 @@ public class SimulationWrapper {
     /*
     Datos para clientes.
      */
-
     public String getNextClientEvent() {
         return simulation.getClientGenerator()
                 .getNextEvent()
@@ -54,8 +53,12 @@ public class SimulationWrapper {
 
     }
 
+    public List<Client> getClient(){
+        return simulation.getClient();
+    }
+
     /*
-    Datos para recepcion.
+    Datos para Alfombra.
      */
 
     public String getMagicCarpetState() {
@@ -107,10 +110,10 @@ public class SimulationWrapper {
         return simulation.getClock().getHour() >= fromHour && simulation.getClock().getHour() <= toHour;
     }*/
 
-  public List<Client> getClient(){
-      return simulation.getClient();
+
+  public LocalDateTime getClockTime(){
+      return simulation.getClock();
   }
 
-    public void getClients() {
-    }
+
 }
